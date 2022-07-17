@@ -2,8 +2,11 @@ import TelegramAPI from 'node-telegram-bot-api';
 import dotenv from 'dotenv';
 import { againOptions, gameOptions } from './options.js';
 
-
 dotenv.config();
+
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 const TOKEN = process.env.BOT_API;
 const bot = new TelegramAPI(TOKEN, { polling: true });
 const chats = {}
