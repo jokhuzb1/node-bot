@@ -47,7 +47,7 @@ bot.on('callback_query', async msg => {
   const chatId = msg.message.chat.id;
   const msgId = msg.message.message_id
   if (data === '/again') {
-    for (let i = 1; i < 3; i++) {
+    for (let i = 0; i < 3; i++) {
       bot.deleteMessage(chatId, msgId - i)
     }
     return startGame(chatId)
